@@ -22,5 +22,5 @@ else {
         Install-Module -Name $Module -Force -Verbose -ErrorAction Stop    
     }
 Add-RdsAccount `
-    -DeploymentUrl “https://rdbroker.wvd.microsoft.com”
+    -DeploymentUrl "https://rdbroker.wvd.microsoft.com"
 
