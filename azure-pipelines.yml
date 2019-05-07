@@ -12,3 +12,19 @@ pool:
 steps:
 - powershell: ./PowerShell/InstallPSWVD.ps1
   displayName: 'Install WVD Module'
+
+- task: CopyFiles@2
+  displayName: 'Copy powershell content'
+  inputs: 
+    SourceFolder: '$(Build.SourcesDirectory)/PowerShell'
+    contents: '**\*' 
+    targetFolder: $(Build.ArtifactStagingDirectory)/PowerShell
+    cleanTargetFolder: true
+
+- task: CopyFiles@2
+  displayName: 'Copy WVD Templaates content'
+  inputs: 
+    SourceFolder: '$(Build.SourcesDirectory)/WVD Templaates'
+    contents: '**\*' 
+    targetFolder: $(Build.ArtifactStagingDirectory)/WVD Templaates
+    cleanTargetFolder: true
