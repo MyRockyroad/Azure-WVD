@@ -24,7 +24,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy WVD Templaates content'
   inputs: 
-    SourceFolder: '$(Build.SourcesDirectory)/WVD Templaates'
+    SourceFolder: '$(Build.SourcesDirectory)/WVD Templates'
     contents: '**\*' 
-    targetFolder: $(Build.ArtifactStagingDirectory)/WVD Templaates
+    targetFolder: $(Build.ArtifactStagingDirectory)/WVD Templates
     cleanTargetFolder: true
